@@ -8,3 +8,6 @@ shark_data$Sex[shark_data$Sex %in% c("FEMALE", "F")] <- "F"
 shark_data$Fatal <- toupper(trimws(shark_data$Fatal))
 shark_data$Fatal[shark_data$Fatal %in% c("Y", "YES", "FATAL")] <- "Y"
 shark_data$Fatal[shark_data$Fatal %in% c("N", "NO")] <- "N"
+# 5. Remove rows with missing or invalid data
+# ------------------------------
+shark_clean <- subset(shark_data, Sex %in% c("M","F") & Fatal %in% c("Y","N"))
