@@ -9,3 +9,5 @@ mosaicplot(summary_table, main="Shark Attack Fatalities by Sex",
 sex_fatal_table <- table(shark_clean$Sex, shark_clean$Fatal)
 print("Contingency Table:")
 print(sex_fatal_table)  
+# Perform Chi-square test
+chi_test <- chisq.test(sex_fatal_table)
