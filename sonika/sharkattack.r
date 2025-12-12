@@ -11,3 +11,6 @@ print("Contingency Table:")
 print(sex_fatal_table)  
 # Perform Chi-square test
 chi_test <- chisq.test(sex_fatal_table)
+# Print Chi-square test results
+print("Chi-square Test Results:")
+print(chi_test)
